@@ -1,0 +1,27 @@
+{% extends 'products_header.html' %}
+{% load static %}
+
+{%block title%}FleekyHub{%endblock%}
+{%block content%}
+<div class="product mt-5 align-middle">
+<hr>
+</div>
+<div class="products mt-5">
+    <h1 class="lg-title text-center">Blockout</h1>
+    <p class="text-center ">100% locally made</p>
+    <div class="container">
+       
+    
+        <div class="navbartxt text-center">
+            <a href="{%url 'products'%}" class="btn btn-outline-dark active" style="background-color:#BBBEFE;">Products</a>
+            <a href="{%url 'blockout'%}" class="btn btn-outline-dark">Blockout</a>
+            <a href="fiveNone" class="btn btn-outline-dark"> 5-in-1 Katrina</a>
+            <a href="threeNone" class="btn btn-outline-dark"> 3-in-1 Katrina</a>
+            <a href="tieback" class="btn btn-outline-dark"> Tieback Holder</a>
+        </div>
+      <!-- products data enddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd -->
+    
+      
+      {% endblock content %}
+
+      

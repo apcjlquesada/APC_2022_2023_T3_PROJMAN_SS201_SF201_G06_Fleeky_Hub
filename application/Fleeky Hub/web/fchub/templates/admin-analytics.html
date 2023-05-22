@@ -1,0 +1,88 @@
+{% extends 'admin-base.html' %}
+{% load static %}
+{% block content %}
+
+
+<head>
+ 
+  <style media="screen">
+    .float{
+      position:fixed;
+      width:70px;
+      height:70px;
+      bottom:60px;
+      right:60px;
+      background-color:#212529;
+      color:#FFF;
+      border-radius:50px;
+      text-align:center;
+      box-shadow: 5px 5px 5px #505050;
+    }
+
+.my-float{
+	margin-top:22px;
+}
+.fa{
+  padding: 0em 0.5em;
+}
+  </style>
+</head>
+
+
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">
+      <h2 class="text-dark">Materials</h2>
+    </div>
+    <table class="table table-hover table-bordered" id="dev-table">
+      <thead>
+        <tr>
+          <th>Fabric Type</th>
+          <th>(₱) Price</th>
+          <th>Color</th>
+          <th>Product Tag</th>
+          <th>Set Tag</th>
+          <th>Count</th>
+          <th>Quantity</th>
+          <th>Payment</th>
+          <th>Month</th>
+         
+          
+        </tr>
+
+      </thead>
+      {% for a in analytics %}
+    {% if a %}
+      <tr>
+        <td> {{a.fabric_type}}</td>
+        <td> ₱ {{a.price}}</td>
+        <td>{{a.color}}</td>
+        <td>{{a.product_tag}}</td>
+        <td>{{a.set_tag}}</td>
+        <td> {{a.count}}</td>
+        <td> {{a.qty}}</td>
+        <td> {{a.payment}}</td>
+        <td> {{a.month_of_purhase}}</td>
+        
+        
+        <td>
+          <div class="container" margin="40px">
+            <a class="btn btn-primary rounded btn-xs" href="{% url 'update-analytics' a.id  %}">Edit<span class="glyphicon glyphicon-edit"></span></a>
+            <a class="btn btn-danger rounded btn-xs" href="{% url 'delete-analytics' a.id %}">Delete<span class="glyphicon glyphicon-trash"></span></a>
+          </div>
+          </td>
+      </tr>
+      {%else%}
+      <br><br><br>
+      <h1>No Info!!</h1>
+      {% endif %}
+      {% endfor %}
+    </table>
+    
+  </div>
+</div>
+<!-- add product floating button -->
+<a href="/admin-add-info-analytics" class="float">
+<i class="fa fa-plus my-float"></i>
+</a>
+{% endblock content %}

@@ -1,0 +1,238 @@
+{% extends 'main-navbar.html' %}
+{% load static %}
+
+{%block title%}FleekyHub{%endblock%}
+{%block content%}
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="{% static '/imgs/FC_ICON.ico' %}" class="about-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who are we?</p>
+                    <h2 class="section-title mb-3">About Fleeky Curtains</h2>
+                    <p>
+                        Fleeky curtains is currently an online business shop that provides comfort, joy, and warm satisfactory to the customers with regards on their curtain needs. It is established in 2021 and currently residing their operations and manufacturing at the local household where expertise and experience comes in hand-in-hand, to strengthen the business in catering services and products directly to the client/s need. The business also strive to position themselves in the competition by providing top-notch services, products, and purchase experience to the consumers at the low and high waged earners.  Fleeky curtains also aims to grow their market share on home product industry by observing and adapting to the behavior of a consumer. The traits of Fleeky Curtains are generally reflected on based on the observable morale and qualities the leading members are. They also aims to strictly perform strong qualities on a product to be used by the general public.             
+                    </p>
+                </div>              
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <!-- service section -->
+    <section class="section" id="service">
+        <div class="container text-center">
+            <p class="section-subtitle">Types of</p>
+            <h6 class="section-title mb-6">Fabrics We Use</h6>
+
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="{% static '/imgs/pencil-case.svg'%}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Sheer</h6>
+                            <p class="subtitle">Is made using thin thread or low density of knit. This results in a semi-transparent and lightweight cloth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="{% static '/imgs/responsive.svg'%}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Katrina</h6>
+                            <p class="subtitle">Katrina Fabric uses a geometric tessellated design, ideal for a formal look.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src=" {% static '/imgs/toolbox.svg'%}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Korean</h6>
+                            <p class="subtitle">Its Layers are also done to Presently Design the Appearance of your Home with the Complexity of its Design.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="{% static '/imgs/analytics.svg' %}" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page" class="icon">
+                            <h6 class="title">Blockout</h6>
+                            <p class="subtitle"> specially designed fabric that is made to 'block' all light from shining through the material.</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of row -->
+        </div>
+    </section><!-- end of service section -->
+
+      <!-- portfolio section -->
+    <section class="section" id="portfolio">
+        <div class="container text-center">
+            <h6 class="section-title mb-6">Product Showcase</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="mx-auto">
+                    <a href="#" class="portfolio-card">
+                        <img class="portfolio-card-img" src="{%static '/imgs/superior.jpg'%}"
+                            class="img-responsive rounded"
+                            alt="Curtain 1">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Intricate Quality Control!</h5>
+                                    <p class="font-weight-normal">Clean Stitching, Longer-Lasting</p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <div class="mx-auto">
+                    <a href="#" class="portfolio-card">
+                        <img class="portfolio-card-img" src="{%static '/imgs/texture.jpg'%}"
+                            class="img-responsive rounded"
+                            alt="Curtain 2">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Heavy Dimming Material</h5>
+                                    <p class="font-weight-normal">Perfect Against Direct Sunlight</p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div><!-- end of row -->
+        </div><!-- end of container -->
+    </section> <!-- end of portfolio section -->
+
+    <!-- pricing section -->
+    <section class="section" id="pricing">
+        <div class="container text-center">
+            <p class="section-subtitle">How Much We Charge?</p>
+            <h6 class="section-title mb-6">Our prices:</h6>
+            <!-- row -->
+            <div class="pricing-wrapper">
+                <div class="pricing-card">
+
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">Sheer</h6>
+                        <div class="pricing-card-list">
+                            <p>Lightweight Material</p>
+                            <p>Textured Surface</p>
+                            <p>With or Without Ring</p>
+                            <p>7ft length</p>
+                            <p>120 Inches width</p>
+                            <p>Price starts at:</p>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <span>₱</span>
+                        <span>250</span>
+                    </div>
+                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Shop Now</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">Katrina</h6>
+                        <div class="pricing-card-list">
+                            <p>5-in-1 & 3-in-1 Set</p>
+                            <p>Polyester Fabric</p>
+                            <p>30-40% Dimming</p>
+                            <p>Daylight Curtains</p>
+                            <p>7ft, 8 Rings</p>
+                            <p>Price Starts at:</p>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <span>₱</span>
+                        <span>750</span>
+                    </div>
+                    <a href="#five and one" class="btn btn-primary mt-3 pricing-card-btn">Shop Now</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">Korean</h6>
+                        <div class="pricing-card-list">
+                            <p>80% Blockout</p>
+                            <p>Double-Backing Material</p>
+                            <p>Premium Brocade Fabric</p>
+                            <p>Textured and Smooth Surface</p>
+                            <p>8 Rings, 7ft Length</p>
+                            <p>Starts at:</p>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <span>₱</span>
+                        <span>950</span>
+                    </div>
+                    <a href="three and one" class="btn btn-primary mt-3 pricing-card-btn">Shop Now</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">Blockouts</h6>
+                        <div class="pricing-card-list">
+                            <p>Textured</p>
+                            <p>100% Pure Blackout</p>
+                            <p>Heavy Dimming Fabric</p>
+                            <p>Triple-Layered Material</p>
+                            <p>Lowers AC Consumption</p>
+                            <p>Price Starts at:</p>
+                        </div>
+                    </div>
+                    <div class="pricing-card-footer">
+                        <span>₱</span>
+                        <span>1,250</span>
+                    </div>
+                    <a href="blackout" class="btn btn-primary mt-3 pricing-card-btn">Shop Now</a>
+                </div>
+
+            </div><!-- end of pricing wrapper -->
+        </div> <!-- end of container -->
+    </section><!-- end of pricing section -->
+    <!-- testimonial section -->
+    <section class="section" id="testmonial">
+        <div class="container text-center">
+            <p class="section-subtitle">What Do Clients Think?</p>
+            <h6 class="section-title mb-6">Reviews:</h6>
+
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-img-holder">
+                            <img src="{%static '/imgs/review1.png'%}" class="testimonial-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">                           
+                        </div>
+                        <div class="testimonial-card-body">
+                            <p class="testimonial-card-subtitle">My Wife and I really liked it! Using it in our Daughter's room!</p>
+                                <p>What did they order?</p>
+                                <p>-Textured Blockout in Cream Vanilla</p>
+                                <br>
+                            <h6 class="testimonial-card-title">Customer from:</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-img-holder">
+                            <img src="{%static '/imgs/review2.png'%}" class="testimonial-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">                        
+                        </div>
+                        <div class="testimonial-card-body">
+                            <p class="testimonial-card-subtitle">Thank you so much! Using it as a backdrop for Online Selling!</p>
+                            <p>What did they order?</p>
+                            <p>-Textured Blockout in Cream Vanilla</p>
+                            <p>-Textured Blockout in Mocha Latte</p>
+                            
+                            <h6 class="testimonial-card-title">Customer from:</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end of container -->
+    </section> <!-- end of testimonial section -->
+   
+        
+
+{%endblock%}

@@ -1,0 +1,93 @@
+{%load static%}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Fleeky Curtains </title>
+    <!--Tab Icon-->
+    <link rel="icon" type="image/x-icon" href="{% static '/imgs/FC_ICON.ico'%}">
+    <!-- font icons -->
+      <!-- font icons -->
+      <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css'%}">
+      <!-- Bootstrap + Steller  -->
+      <link rel="stylesheet" href="{% static 'css/meyawo1.css'%}">
+      <!--CSS Bootstrap-->
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar affix-top" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="{%url 'index'%}">Fleeky Curtains</a>         
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="{%url 'index'%}">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="{%url 'products'%}">All Products</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header_login">   
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up"></span>
+                <span class="down"></span>
+            </h1>
+            <p class="header-subtitle"></p>            
+
+           <!--<button class="btn btn-primary"></button>--> 
+        </div>              
+    </header><!-- end of page header -->
+	
+    <!-- login page -->
+    <form method="post" > {% csrf_token %}
+    <section class="section_login">
+         <div class="login">
+            <div class="row">
+                <div class="col-md-10">
+                        <form class="box" method="post">
+                          {% csrf_token %}
+                            <h1>Admin Login</h1>
+                                       {% render_field form.username class="form-control" placeholder="Username" autocomplete="off" %}
+                                       {% render_field form.password class="form-control" placeholder="Password" %}
+                                       <br>
+                             <input class="btn btn-primary btn-md ms-2" type="submit" name="" value="Login" >
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section> <!-- end of login page -->
+</form>
+
+</script>
+	<!-- core  -->
+    <script src="{%static '/vendors/jquery/jquery-3.4.1.js'%}"></script>
+    <script src="{%static '/vendors/bootstrap/bootstrap.bundle.js'%}"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="{%static '/vendors/bootstrap/bootstrap.affix.js'%}"></script>
+
+    <!-- Meyawo js -->
+    <script src="{% static '/js/meyawo.js'%}"></script>
+
+    <!--JS Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+</body>
+</html>

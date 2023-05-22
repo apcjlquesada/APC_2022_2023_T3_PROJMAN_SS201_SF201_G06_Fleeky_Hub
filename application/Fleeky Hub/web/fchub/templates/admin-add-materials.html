@@ -1,0 +1,52 @@
+{% extends 'admin-base.html' %} {% load widget_tweaks %} {% block content %}
+
+<head>
+</head>
+<br><br><br><br><br><br>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="container register-form">
+        <div class="form">
+            <div class="note text-center">
+                <h1 class="text-dark">ADD MATERIALS</h1>
+            </div>
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Materials Name</label> {% render_field MaterialsForm.name class="form-control" placeholder="Materials Name" %}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Quantity</label> {% render_field MaterialsForm.qty class="form-control" placeholder="Quantity" %}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Price (₱)</label> {% render_field MaterialsForm.price class="form-control" placeholder="Price" %}
+                            </div>
+                            <div class="form-group">
+                                <label for="">Unit</label> {% render_field MaterialsForm.unit class="form-control" placeholder="Unit Type" %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p>Additional Requirements:</p>
+                <hr>
+                <div class="row">
+                        <div class="form-group">
+                            <label for="">Description</label> {% render_field MaterialsForm.description class="form-control" placeholder="Description" %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto bg-dark rounded" >
+            <center><button type="submit" class="btn btn-lg text-light">ADD</button></center>
+        </div>
+    </div>
+    
+</form>
+
+{% endblock content %}

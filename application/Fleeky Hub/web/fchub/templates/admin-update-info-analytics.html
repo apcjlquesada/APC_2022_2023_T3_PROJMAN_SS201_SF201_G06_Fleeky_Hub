@@ -1,0 +1,66 @@
+{% extends 'admin-base.html' %} {% load widget_tweaks %} {% block content %}
+
+
+</head>
+<br><br><br><br><br><br>
+<!------ update page for doctor by admin(sumit)  ---------->
+<div>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="container register-form">
+        <div class="form">
+            <div class="note text-center">
+                <h1 class="text-dark">ADD INFO</h1>
+            </div>
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="">Fabric Type</label> {% render_field AnalyticsForm.fabric_type class="form-control" placeholder="Fabric Type" %}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Product Tag</label> {% render_field AnalyticsForm.product_tag class="form-control" placeholder="Product Tag" %}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Set Tag</label> {% render_field AnalyticsForm.set_tag class="form-control" placeholder="Set Tag" %}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="">Quantity</label> {% render_field AnalyticsForm.qty class="form-control" placeholder="Quantity" %}
+                            </div>
+                            <div class="form-group">
+                                <label for="">Count</label> {% render_field AnalyticsForm.count class="form-control" placeholder="Count" %}
+                            </div>
+                            <div class="form-group">
+                                <label for="">Month</label> {% render_field AnalyticsForm.month_of_purhase  class="form-control" placeholder="Month" %}
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <p>Additional Requirements:</p>
+                <hr>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="">Color</label> {% render_field AnalyticsForm.color class="form-control" placeholder="Color" %}
+                    </div>
+                    <div class="form-group">
+                        <label for="">Payment</label> {% render_field AnalyticsForm.payment class="form-control" placeholder="Payment" %}
+                    </div>
+                    <div class="form-group">
+                        <label for="">Price</label> {% render_field AnalyticsForm.price class="form-control" placeholder="Price" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto bg-dark rounded" >
+        <center><button type="submit" class="btn btn-lg text-light">UPDATE</button></center>
+    </div>
+</form>
+
+</div>
+{% endblock content %}

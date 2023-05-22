@@ -1,0 +1,94 @@
+{% extends 'my-profile-navbar.html' %}
+{% load static %}
+
+{%block title%}FleekyHub{%endblock%}
+{%block content%}
+<div class="container">
+    <br>
+    <hr>
+</div>
+    <!-- USER PROFILE -->
+    <section style="background-color: #eee;">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col">
+              <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+                <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item"><a href="{%url 'customer-home'%}">Home</a></li>
+                  <li class="breadcrumb-item"><a href="{%url 'my-profile'%}">My Profile</a></li>
+                  <li class="breadcrumb-item"><a href="{%url 'edit-profile'%}">Edit Profile</a></li>
+                  <li class="breadcrumb-item"><a href="{%url 'my-order'%}">Track orders</a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card mb-4">
+                <div class="card-body text-center">
+                  <h3 class="text-muted mb-4">{{request.user}}</h3>
+                  <img src="{{ customer.profile_pic.url }}"   alt="profile pic" class="img-rounded img-responsive" />
+                  <hr>
+                </div>
+              </div>
+              <div class="card mb-4 mb-lg-0">
+                <div class="card-body p-0">
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Full Name</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <h3 class="text mb-0">{{user.first_name}} {{user.last_name}}</h3>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Email</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <h3 class="text mb-0">{{customer.email}}</h3>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Mobile</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <h3 class="my-auto">{{customer.mobile}}</h3>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Full Address</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">Street: {{customer.street}}</p>
+                      <p class="text-muted mb-0">Barangay: {{customer.barangay_text}}</p>
+                      <p class="text-muted mb-0">City: {{customer.city_text}}</p>
+                      <p class="text-muted mb-0">Province:{{customer.province_text}}</p>
+                      <p class="text-muted mb-0">Region: {{customer.region_text}}</p>
+                      <p class="text-muted mb-0">Zipcode:{{customer.zipcode}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                
+        
+              </div>
+            </div>
+          </div>
+    </div>
+      </section>
+      <!--END OF USER PROFILE-->
+{% endblock content %}

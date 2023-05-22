@@ -1,0 +1,83 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>{%block title%}  {%endblock%}</title>
+    <!--Tab Icon-->
+    <link rel="icon" type="image/x-icon" href="{% static '/imgs/FC_ICON.ico'%}">
+    <!-- font icons -->
+    <!-- font icons -->
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css'%}">
+    <!-- Bootstrap + Steller  -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/meyawo1.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/cards.css'%}">
+    <!--CSS Bootstrap-->
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xl-3">
+                <div class="card bg-c-blue order-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20 text-light">Registed Customer</h6>
+                        <h1 class="text-light"><i class="fa fa-users left"></i><span></span></h1>
+                        <h3 class="m-b-0 text-light"><span class="f-right text-light">{{customercount}}</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-xl-3">
+                <div class="card bg-c-blue order-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20 text-light">Total Product</h6>
+                        <h1 class="text-light"><i class="fa fa-shopping-cart"></i><span></span></h1>
+                        <h3 class="m-b-0 text-light"><span class="f-right text-light">{{productcount}}</span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-xl-3">
+                <div class="card bg-c-blue order-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20 text-light">Total Orders</h6>
+                        <h1 class="text-light"><i class="fa fa-bar-chart"></i><span></span></h1>
+                        <h3 class="m-b-0 text-light"><span class="f-right text-light">{{ordercount}}</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+
+
+
+    {%block content%}
+
+
+    {% endblock %}
+
+
+
+
+	
+	
+	<!-- core  -->
+    <script src="{%static '/vendors/jquery/jquery-3.4.1.js'%}"></script>
+    <script src="{%static '/vendors/bootstrap/bootstrap.bundle.js'%}"></script>
+    
+    <!-- bootstrap 3 affix -->
+    <script src="{%static '/vendors/bootstrap/bootstrap.affix.js'%}"></script>
+    <!-- Meyawo js -->
+    
+    <script src="{% static '/js/meyawo.js'%}"></script>
+
+    <!--JS Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+</body>
+</html>
